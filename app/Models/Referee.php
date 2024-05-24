@@ -20,6 +20,7 @@ class Referee extends Model
         'licenseNum',
         'email',
         'password',
+        'photo'
     ];
 
     /**

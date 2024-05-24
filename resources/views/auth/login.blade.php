@@ -6,7 +6,7 @@
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
                 Don't have an account?
                 <a class="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"
-                    href="{{ route('login.signup') }}">
+                    href="{{ route('signup') }}">
                     Register
                 </a>
             </p>

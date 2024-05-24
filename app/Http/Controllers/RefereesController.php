@@ -36,6 +36,7 @@ class RefereesController extends Controller
         $password = $request->password;
         $formFields['licenseNum'] = strtolower($request->licenseNum);
         $formFields['password'] = Hash::make($password);
+       
         // dd($formFields);
         // * Insertion^
         Referee::create($formFields);
