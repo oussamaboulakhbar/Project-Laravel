@@ -37,7 +37,7 @@ class RefereesRequest extends FormRequest
             // 'licenseNum' => 'required|unique:referees',
             'email' => 'required|email',
             'password' => 'required|min:6|confirmed',
-            'photo' => 'image|mimes:png,jpg,svg,jpeg|max:10240'
+            'photo' => 'nullable|image|mimes:png,jpg,svg,jpeg|max:10240'
         ];
     }
 }

@@ -16,3 +16,5 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
+    class_alias('Barryvdh\Snappy\Facades\SnappyPdf', 'PDF');
+    $app->register(Barryvdh\Snappy\LumenServiceProvider::class);

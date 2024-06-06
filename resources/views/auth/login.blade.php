@@ -1,5 +1,11 @@
 <x-guest>
-    <div class="mx-auto max-w-md space-y-6">
+    <div class="mx-auto max-w-md space-y-6 ">
+        @if (session('success'))
+        @include('partials.flashbag')
+        @endif
+        @if (session('error'))
+        @include('partials.flashbag')
+        @endif
         <div class="space-y-2 text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">Sign in to your account
             </h2>
@@ -11,7 +17,7 @@
                 </a>
             </p>
         </div>
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" >
             @csrf
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Email</label>
@@ -40,4 +46,5 @@
                 in</button>
         </form>
     </div>
+
 </x-guest>

@@ -1,10 +1,42 @@
-@if (session() -> has('success'))
-    <x-alert type="success">
-        {{ session('success') }}
-    </x-alert>
+@if (session()->has('success'))
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-right',
+            iconColor: 'white',
+            customClass: {
+                popup: 'colored-toast',
+            },
+            showConfirmButton: false,
+            timer: 2500,
+            timerProgressBar: true,
+        });
+        (async () => {
+            await Toast.fire({
+                icon: 'success',
+                title: "{{ session('success') }}",
+            })
+        })()
+    </script>
 @endif
-@if (session() -> has('error'))
-    <x-alert type="danger">
-        {{ session('error') }}
-    </x-alert>
+@if (session()->has('error'))
+<script>
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-right',
+        iconColor: 'white',
+        customClass: {
+            popup: 'colored-toast',
+        },
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true,
+    });
+    (async () => {
+        await Toast.fire({
+            icon: 'error',
+            title: "{{ session('error') }}",
+        })
+    })()
+</script>
 @endif

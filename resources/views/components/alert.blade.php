@@ -1,6 +1,6 @@
 @props(['type'])
 
-<div class="alert alert-{{ $type }}" role="alert">
+<div class="alert alert-warning" role="alert">
     {{ $slot }}
 </div>
 

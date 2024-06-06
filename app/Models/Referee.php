@@ -11,9 +11,11 @@ use Illuminate\Notifications\Notifiable;
 class Referee extends Model
 {
     use HasFactory;
-    use SoftDeletes;
     use Notifiable;
 
+    public function matches(){
+        return $this->hasMany(Matche::class);
+    }
     protected $dates = ['created_at'];
     protected $fillable = [
         'fullName',

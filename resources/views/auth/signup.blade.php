@@ -7,7 +7,17 @@
         <form action="{{ route('signup.create') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
             @csrf
             <div class="space-y-2">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"   for="name">Full Name</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Upload
+                    Profile picture
+                </label>
+                <input
+                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                    aria-describedby="user_avatar_help" id="user_avatar" type="file" name="photo">
+            </div>
+            <div class="space-y-2">
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="name">Full
+                    Name</label>
                 <input id="name" name="fullName" placeholder="Enter your Full Name" required type="text"
                     value="{{ old('fullName') }}"
                     class="w-full rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-600">
@@ -16,7 +26,8 @@
                 @enderror
             </div>
             <div class="space-y-2">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="number">License Number</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="number">License
+                    Number</label>
                 <input id="number" name="licenseNum" placeholder="Enter your Number" required type="text"
                     value="{{ old('licenseNum') }}"
                     class="w-full rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-600">
@@ -25,7 +36,7 @@
                 @enderror
             </div>
             <div class="space-y-2">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"  for="email">Email</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="email">Email</label>
                 <input id="email" name="email" placeholder="Enter your Email" value="{{ old('email') }}" required
                     type="email"
                     class="w-full rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-600">
@@ -34,7 +45,8 @@
                 @enderror
             </div>
             <div class="space-y-2">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="password">Password</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    for="password">Password</label>
                 <input id="password" name="password" placeholder="Enter your password" required type="password"
                     value="{{ old('password') }}"
                     class="w-full rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-600">
@@ -43,7 +55,8 @@
                 @enderror
             </div>
             <div class="space-y-2">
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="cnPassword">Confirme Password</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="cnPassword">Confirme
+                    Password</label>
                 <input id="cnPassword" name="password_confirmation" placeholder="Confirme your password" required
                     type="password" value="{{ old('password_confirmation') }}"
                     class="w-full rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-600">
@@ -51,15 +64,6 @@
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="space-y-2">
-
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="user_avatar">Upload
-                file</label>
-            <input
-                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                aria-describedby="user_avatar_help" id="user_avatar" type="file" name="photo">
-            </div>
-
 
             <button type="submit"
                 class="w-full flex justify-center items-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

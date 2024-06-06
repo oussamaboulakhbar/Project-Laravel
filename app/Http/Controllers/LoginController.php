@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Referee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -16,10 +17,11 @@ class LoginController extends Controller
     {
         $login = $request->email;
         $password = $request->password;
-        $list = ['email' => $login, 'password' => $password];
-        if (Auth::attempt($list)) {
+        $user = Referee::where('email', $login);
+
+        if ($user && Auth::attempt(['email' => $login, 'password' => $password])) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard')->with('success', 'welcom Mr. '. (auth()->user()->fullName ));
+            return redirect()->route('home')->with('success', 'welcome Mr. '. (auth()->user()->fullName ));
         } else {
             return back()->with('error', 'Email or Password incorrect. ')
                 // ->withErrors([

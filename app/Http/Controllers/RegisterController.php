@@ -19,9 +19,10 @@ class RegisterController extends Controller
         if ($request->photo) {
             $nameImg = $request->file('photo')->getClientOriginalName();
             $formFields['photo'] = $request->file('photo')->storeAs('images', $nameImg, 'public');
-        } else {
-            $formFields['photo'] = 'images/man.png';
+        // } else {
+        //     $formFields['photo'] = 'images/man.png';
         }
+        // dd($formFields);
         Referee::create($formFields);
 
         // Auth::login($referee);
@@ -31,3 +32,4 @@ class RegisterController extends Controller
 
     }
 }
+
