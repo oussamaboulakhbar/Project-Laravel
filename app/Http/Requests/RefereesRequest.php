@@ -21,18 +21,18 @@ class RefereesRequest extends FormRequest
      */
     public function rules(): array
     {
-        $licenses = ['jc123456', 'jc654321', 'jc202408'];
+        // $licenses = ['jc123456', 'jc654321', 'jc202408'];
         return [
             'fullName' => 'required',
             'licenseNum' => [
                 'required',
                 'unique:referees',
-                function ($attribute, $value, $fail) use ($licenses) {
-                    $value = strtolower($value); // Convert $value to lowercase
-                    if (!in_array($value, $licenses)) {
-                        $fail("The $attribute must match one of the allowed license numbers.");
-                    }
-                }
+                // function ($attribute, $value, $fail) use ($licenses) {
+                //     $value = strtolower($value); // Convert $value to lowercase
+                //     if (!in_array($value, $licenses)) {
+                //         $fail("The $attribute must match one of the allowed license numbers.");
+                //     }
+                // }
             ],
             // 'licenseNum' => 'required|unique:referees',
             'email' => 'required|email',
