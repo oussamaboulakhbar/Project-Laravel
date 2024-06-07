@@ -3,12 +3,12 @@
 
 - **Frontend et Backend**:
     <div>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width=55 />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" width=55 />
             
     </div>
 - **Base de Données**:
   <div>
-       <img src="https://icons8.com/icon/9nLaR5KFGjN0/mysql-logo" width=55 />
+       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width=55 />
   </div>
 
 ## Getting Started
