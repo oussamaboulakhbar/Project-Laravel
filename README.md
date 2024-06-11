@@ -86,7 +86,7 @@ Follow these steps to get the application up and running on your local machine.
     ```
 10. **Install wkhtmltopdf**
 
-Download and install wkhtmltopdf from the official website. Follow the instructions for your operating system. Ensure that the wkhtmltopdf executable is in your system's PATH.
+Download and install <a href="https://wkhtmltopdf.org/downloads.html"> wkhtmltopdf </a> from the official website. Follow the instructions for your operating system. Ensure that the wkhtmltopdf executable is in your system's PATH.
 
 13. **Serve the application**
     ```sh
