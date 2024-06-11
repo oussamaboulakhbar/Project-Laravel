@@ -85,9 +85,10 @@ Follow these steps to get the application up and running on your local machine.
     php artisan storage:link
     ```
 10. **Install wkhtmltopdf**
-    Download and install wkhtmltopdf from the official website. Follow the instructions for your operating system. Ensure that the wkhtmltopdf executable is in your system's PATH.
 
-11. **Serve the application**
+Download and install wkhtmltopdf from the official website. Follow the instructions for your operating system. Ensure that the wkhtmltopdf executable is in your system's PATH.
+
+13. **Serve the application**
     ```sh
     php artisan serve
     ```
