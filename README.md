@@ -24,6 +24,7 @@ Follow these steps to get the application up and running on your local machine.
 - NPM
 - MySQL
 - XAMPP (or any other local server environment)
+- wkhtmltopdf (for PDF generation)
 
 ### Installation
 
@@ -83,8 +84,10 @@ Follow these steps to get the application up and running on your local machine.
     ```sh
     php artisan storage:link
     ```
+10. **Install wkhtmltopdf**
+    Download and install wkhtmltopdf from the official website. Follow the instructions for your operating system. Ensure that the wkhtmltopdf executable is in your system's PATH.
 
-10. **Serve the application**
+11. **Serve the application**
     ```sh
     php artisan serve
     ```
