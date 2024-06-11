@@ -24,7 +24,7 @@ Follow these steps to get the application up and running on your local machine.
 - NPM
 - MySQL
 - XAMPP (or any other local server environment)
-- wkhtmltopdf (for PDF generation)
+- <a href="https://wkhtmltopdf.org/downloads.html"> wkhtmltopdf </a> (for PDF generation)
 
 ### Installation
 
