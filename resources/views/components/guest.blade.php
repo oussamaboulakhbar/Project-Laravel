@@ -78,7 +78,7 @@
     </div>
     <style>
         .content {
-            background-image: url("{{ asset('photo/download.svg') }}");
+            background-image: url("{{ asset('photo/BackgroundBlue.svg') }}");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
